@@ -65,7 +65,7 @@ public class SpringAIChatService {
 
     private static String buildPromptWithMemory(Deque<ChatTurn> turns, String userPrompt) {
         StringBuilder prompt = new StringBuilder();
-        prompt.append("You are a helpful assistant. Keep context from previous messages.\n");
+        prompt.append("You are a helpful assistant. Keep context from previous messages. Always answer in Portuguese (Brazil), regardless of the language of the history.\n");
         prompt.append("Conversation history:\n");
 
         if (turns.isEmpty()) {
